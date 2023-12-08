@@ -1,14 +1,15 @@
 import { useState } from "react";
 import {
-  LeftSection,
   MenuButton,
   NavContainer,
   NavLink,
   Navigator,
-  RightSection,
   Shield,
   MobileMenu,
   MobileSection,
+  BranchName,
+  BranchContainer,
+  LinksSection,
 } from "./navbar.style";
 import { useMediaQuery } from "react-responsive";
 import theme from "../../styles/theme";
@@ -33,7 +34,6 @@ const Navbar = () => {
           {showMenu && (
             <Navigator>
               <MobileSection>
-                <NavLink>Inicio</NavLink>
                 <NavLink>Productos</NavLink>
                 <NavLink>Exclusivos</NavLink>
                 <NavLink>Nosotros</NavLink>
@@ -46,19 +46,21 @@ const Navbar = () => {
       ) : (
         <>
           <Navigator>
-            <LeftSection>
-              <NavLink>Inicio</NavLink>
+            <BranchContainer>
+              <Shield>
+                <img src="green-logo.png" alt="Logo Datawa" />
+              </Shield>
+              <BranchName>
+                <img src="../../../public/white-branch.png" alt="" />
+              </BranchName>
+            </BranchContainer>
+            <LinksSection>
               <NavLink>Productos</NavLink>
               <NavLink>Exclusivos</NavLink>
-            </LeftSection>
-            <Shield>
-              <img src="green-logo.png" alt="Logo Datawa" />
-            </Shield>
-            <RightSection>
               <NavLink>Nosotros</NavLink>
               <NavLink>Contacto</NavLink>
               <NavLink>Pregutas</NavLink>
-            </RightSection>
+            </LinksSection>
           </Navigator>
         </>
       )}

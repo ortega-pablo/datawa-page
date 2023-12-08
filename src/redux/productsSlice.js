@@ -11,7 +11,16 @@ export const fetchProducts = createAsyncThunk(
     }
   }
 );
-
+export const fetchSwiperProducts = createAsyncThunk(
+  "products/fetchSwiperProducts",
+  async (data) => {
+    try {
+      return data;
+    } catch (error) {
+      throw Error("Error al cargar los productos");
+    }
+  }
+);
 const productsSlice = createSlice({
   name: "products",
   initialState: {

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export const NavContainer = styled.header`
   display: flex;
   justify-content: center;
+  width: 100vw;
   height: 58px;
   background-color: ${theme.colors.midnightGreen};
 `;
@@ -12,43 +13,36 @@ export const NavContainer = styled.header`
 export const Navigator = styled.nav`
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-
+  justify-content: space-between;
+  width: 1400px;
   @media (max-width: ${theme.bp.medium}) {
     gap: 15px;
   }
 `;
 
-export const LeftSection = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 60px;
-  gap: 30px;
-  width: 500px;
-  height: 100%;
-
-  @media (max-width: ${theme.bp.medium}) {
-    gap: 15px;
-    padding-right: 0px;
-  }
-`;
-export const RightSection = styled.div`
+export const BranchName = styled.h1`
+display: flex;
+align-items: center;
+padding-top: 12px;
+img{
+  height: 34px;
+}
+`
+export const BranchContainer = styled.div`
+display: flex;
+align-items: flex-start;
+gap: 15px;
+`
+export const LinksSection = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 60px;
   gap: 30px;
   height: 100%;
-  width: 500px;
 
   @media (max-width: ${theme.bp.medium}) {
     gap: 15px;
-    padding-left: 0px;
   }
 `;
 

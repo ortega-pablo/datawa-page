@@ -1,5 +1,6 @@
 import Footer from "../../components/footer/Footer";
 import BannerSection from "../../components/home/banner-section/BannerSection";
+import Carousel from "../../components/home/carousel/Carousel";
 import CategoriesSection from "../../components/home/categories-section/CategoriesSection";
 import CustomizedSection from "../../components/home/customized-section/CustomizedSection";
 import OurHistorySection from "../../components/home/our-history/OurHistorySection";
@@ -15,9 +16,10 @@ function Home() {
       <Navbar />
       <HomeMain>
         <BannerSection />
+        <Carousel />
         <CategoriesSection />
-        <OurHistorySection />
         <ProductsSection />
+        <OurHistorySection />
         <ServicesSection />
         <WhySection />
         <CustomizedSection />

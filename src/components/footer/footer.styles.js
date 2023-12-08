@@ -6,7 +6,7 @@ export const FooterSection = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1440px;
+  width: 100vw;
   background-color: ${theme.colors.midnightGreen};
   padding: 0;
   margin: 0;
